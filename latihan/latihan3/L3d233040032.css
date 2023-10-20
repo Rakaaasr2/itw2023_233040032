@@ -40,3 +40,8 @@ h3 {
 .p2 {
     text-align: center;
 }
+
+.p2 a {
+    color: blue;
+    text-decoration: none;
+}

@@ -62,6 +62,7 @@ body {
 
 .header {
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .header .judul {
@@ -87,7 +88,28 @@ body {
 
 .hero {
     height: 280px;
-    background-image: url(img/Hero.jpg);
+    background-image: url(img/hero.jpg); 
     background-size: cover;
-    background-position:0 0;
+    background-position: 0 -645px;
+    border-top: 5px solid salmon;
+    border-bottom: 5px solid grey;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.content .penulis {
+    font-size: 11px;
+    margin-top: -6px;
+}
+
+.content .penulis a {
+    color: salmon;
+    text-decoration: none;
 }
