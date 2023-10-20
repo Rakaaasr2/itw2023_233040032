@@ -52,6 +52,7 @@ table {
 body {
     font: 16px/28px arial, sans-serif;
     background-color: #eaeaea;
+    background-image: url(img/webb.png);
     color: #333;
 }
 .container {
@@ -92,7 +93,7 @@ body {
     background-size: cover;
     background-position: 0 -645px;
     border-top: 5px solid salmon;
-    border-bottom: 5px solid grey;
+    border-bottom: 5px solid lightskyblue;
 }
 
 .content {
@@ -106,10 +107,26 @@ body {
 
 .content .penulis {
     font-size: 11px;
-    margin-top: -6px;
+    margin-top: -5px;
 }
 
 .content .penulis a {
     color: salmon;
     text-decoration: none;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+}
+
+.footer .copy {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 12px;
 }
