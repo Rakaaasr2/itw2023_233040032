@@ -6,8 +6,7 @@
 }
 
 body {
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
+    background-image: url(../img/backround.png);
     font: 18px/36px arial, sans-serif;
 }
 
@@ -151,8 +150,34 @@ h1 {
 }
 
 .overlay:target .next,
-.overlay:target .prev {
+.overlay:target .prev,
+.overlay:target .agent,
+.overlay:target .agents {
     animation: fadeajah .5s .0s forwards;
+}
+
+.overlay .agent {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 45px;
+    margin-left: -80px;
+    margin-bottom: -15px;
+}
+
+.overlay .agents {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 45px;
+    margin-left: -60px;
+    margin-bottom: -15px;
 }
 
 /* navigasi */
