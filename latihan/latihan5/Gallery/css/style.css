@@ -1,0 +1,219 @@
+/* Font */
+
+@font-face {
+    font-family: 'Valorant Font';
+    src: url(../fonts/Valorant\ Font.woff) format('woff');
+}
+
+body {
+    background-image: url(../img/Full/Background.png);
+    background-size: cover;
+    font: 18px/36px arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Valorant Font', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom , #ff0000, #5a0000);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+
+.container {
+    width: 600px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.gallery {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    border: 5px solid black;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    
+    
+}
+
+
+.gallery li,
+.gallery li span {
+    border-radius: 50%;
+}
+
+.gallery .chamber120,
+.gallery .gekko120,
+.gallery .phoenix120,
+.gallery .reyna120 {
+    width: 120px;
+    border-radius: 50%;
+
+}
+
+.gallery li span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22 px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #ffffff;
+    text-shadow: 1px 3px 1px rgb(255, 25, 0);
+    font-style: italic;
+    opacity: 0;
+    transition: .3s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;ii
+
+
+}
+.clear {
+    clear: both;
+}
+
+/* overlay */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.0);
+    z-index: 9999;
+    transition: 0.8;
+    text-align: center;
+    padding: 100px 0;
+    
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.8);
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 4px 4px 15px rgb(251, 21, 0, 0.6);
+}
+
+.overlay:target img {
+    animation: fadeajah 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 60px;
+    right: 480px;
+    font-size: 30px;
+    font-family: comic sans ms;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: 1px solid rgb(255, 255, 255);
+    width: 30px;
+    height: 35px;
+    line-height: 33px;
+    opacity: 0;
+    transition: 1s;
+    border-radius: 10%;
+}
+
+.overlay:target .close {
+    animation: SlideLeft .7s .3s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeajah .5s .0s forwards;
+}
+
+/* navigasi */
+.next, .prev{
+	width: 90px;
+	height: 90px;
+	background-image: url(../img/next.png);
+	position: absolute;
+	text-indent: -999999px;
+	top: 45%;
+	margin-left: 20px;
+    opacity: 0;
+	
+}
+
+.prev {
+    background-image: url(../img/prev.png);
+    margin-left: -100px;
+}
+
+/* animasi */
+
+@keyframes fadeajah {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+}
+
+100% {
+    transform: scale(1);
+    opacity: 1;
+    }
+
+}
+
+@keyframes ZoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes SlideLeft {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin: 1;
+    }
+}
