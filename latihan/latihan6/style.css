@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    background-color: #1f1f21;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: #1f1f21;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: white;
+    height: 80px;
+    align-items: center;
+    box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.logo span {
+    color:#ffae00;
+}
+
+.active {
+    background-color: #ffae00;
+    color: #ffF;
+    padding: 8px;
+    border-radius: 5px;
+    color: #ffF !important;
+  
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+}
+
+
+nav ul li a {
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.8em;
+    text-decoration: none;
+
+}
+
+nav ul li a:hover {
+    color: #ffae00;
+}
+
+/* hamburger menu */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+
+}
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color:#fff;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: #fff;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+/* Resvonsive Breakpoint */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .active {
+        background-color: transparent;
+        color: #ffae00 !important;
+    }
+
+    .active:hover {
+        color: #ffae00;
+    }
+    nav ul {
+        position: absolute;
+        right: 50px;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1f1f21;
+        z-index: -1;
+        transform: translatex(100%);
+        transition: all 0.5s;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    }
+}
